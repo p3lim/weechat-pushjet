@@ -137,8 +137,8 @@ def should_send(buffer, tags, nick, highlighted):
 	elif notify_when == 'detached':
 		# user has opted to only be notified when detached (relays)
 		num_relays = weechat.info_get('relay_client_count', 'connected')
-		if num_relays == 0:
-			# no relays connected, bail
+		if num_relays != 0:
+			# some relay(s) connected, bail
 			return False
 
 	if nick == weechat.buffer_get_string(buffer, 'localvar_nick'):
