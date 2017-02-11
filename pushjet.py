@@ -13,7 +13,7 @@ from urllib import urlencode
 
 SCRIPT_NAME = 'pushjet'
 SCRIPT_AUTHOR = 'p3lim'
-SCRIPT_VERSION = '0.1.0'
+SCRIPT_VERSION = '0.1.1'
 SCRIPT_LICENSE = 'MIT'
 SCRIPT_DESC = 'Send highlights and mentions through Pushjet.io'
 
