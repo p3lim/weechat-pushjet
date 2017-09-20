@@ -67,7 +67,7 @@ def send_message(title, message):
 			timeout = 1
 
 		data = urlencode(data)
-		cmd = 'python -c \'from urllib2 import Request, urlopen; r = urlopen(Request("%s", "%s")); print r.getcode()\'' % (host, data)
+		cmd = 'python2 -c \'from urllib2 import Request, urlopen; r = urlopen(Request("%s", "%s")); print r.getcode()\'' % (host, data)
 		weechat.hook_process(cmd, timeout, 'send_message_callback', '')
 
 def send_message_callback(data, command, return_code, out, err):
